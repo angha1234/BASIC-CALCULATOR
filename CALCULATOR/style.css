@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, lightgreen, lightyellow, lightpink, lightblue, lightyellow);
+}
+
+.panda-image1 {
+  position: absolute; /* Position the image absolutely */
+  right: 0; /* Align to the left side */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  width: 400px; /* Adjust width as needed */
+  height: 800px; /* Maintain aspect ratio */
+  z-index: 1; /* Ensure the image is behind other content */
+}
+
+.panda-image2 {
+  position: absolute; /* Position the image absolutely */
+  left: 0; /* Align to the left side */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  width: 400px; /* Adjust width as needed */
+  height: 800px; /* Maintain aspect ratio */
+  z-index: 1; /* Ensure the image is behind other content */
+}
+
+.container {
+  z-index: 12;
+  width: 420px;
+  padding: 15px;
+  border-radius: 12px;
+  background-color: transparent; /* Fully transparent background */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5); /* Darker shadow for more depth */
+  border: 5px solid rgba(0, 0, 0, 1); /* Thick black border */
+  margin-top: 40px; /* Adjust this value to shift the container down */
+}
+
+.container input[type="text"] {
+  width: 100%;
+  height: 100px;
+  margin: 0 3px;
+  outline: none;
+  border: 5px solid rgba(0, 0, 0, 1);
+  color: black;
+  font-size: 50px;
+  text-align: right;
+  padding-right: 10px;
+  background: transparent;
+  border-radius: 12px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+  transition: all 0.3s ease; /* Smooth transition for focus effect */
+}
+
+.container input[type="text"]:focus {
+  background: rgba(255, 255, 255, 0.2); /* Light background on focus */
+  box-shadow: 0 0 15px rgba(167, 255, 119, 0.5); /* Glow effect on focus */
+}
+
+.container input[type="button"] {
+  height: 75px;
+  color: #fff;
+  width: calc(100% / 4 - 5px);
+  background: transparent;
+  border-radius: 50%; /* Make the button circular */
+  border: 3px solid brown; /* Brown border */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for the button */
+  color: black; /* Text color */
+  margin-top: 15px;
+  outline: none;
+  border: 5px solid rgba(0, 0, 0, 1);
+  font-size: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Add a bubble effect */
+.container input[type="button"]:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 25px rgba(167, 255, 119, 0.5); /* Shadow effect */
+}
+
+.container input[type="button"]:active {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Slightly smaller shadow when active */
+  transform: translateY(2px); /* Simulate a press effect */
+}
+
+.container input[type="button"]:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Styles for the labels */
+@font-face {
+    font-family: 'Lucida Handwriting';
+    src: url('path/to/LucidaHandwriting.ttf') format('truetype'); /* Adjust the path to your font file */
+}
+
+.label {
+    position: absolute; /* Position them absolutely */
+    top: 10px; /* Aligns the label to the top of the container */
+    left: 50%; /* Centers the label horizontally */
+    transform: translateX(-50%); /* Adjusts the label to be perfectly centered */
+    color: black; /* Change label color to black */
+    font-size: 60px; /* Font size for labels */
+    font-weight: bold; /* Bold text */
+    z-index: 1; /* Ensure they are behind the container */
+    font-family: 'Lucida Handwriting', cursive; /* Use Lucida Handwriting font */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow effect */
+}
